@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+div {
+    border: solid 1px gray;
+    text-align: center;
+    vertical-align: center;
+}
+
+.wrapper {
+ display: grid;
+ grid-template-columns: repeat(12, lfr);
+ grid-template-rows: 40px 100px 40px;
+}
+
+.footer {
+ grid-column:span 12;
+}
+
+@media screen and (min-width: 768px) {
+
+.header {
+ grid-column: span 12;
+}
+
+.menu {
+ grid-column: span 4;
+}
+
+.content {
+ grid-column: span 8;
+}
+}
+@media screen and (max-width: 767px) {
+ .header {
+  grid-column: span 6;
+ }
+
+ .menu {
+  grid-row: 1;
+  grid-column: span 6;
+ }
+ 
+ .content {
+  grid-column: span 12;
+ }
+}
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+	<div class="header">Header</div>
+    <div class="menu">Menu</div>
+    <div class="content">Content</div>
+    <div class="footer">Footer</div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
